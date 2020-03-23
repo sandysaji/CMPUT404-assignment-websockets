@@ -241,17 +241,17 @@
 
       // Add the application specific mouse listeners!
       //XXX: TODO Make these prettier!
-      // Changed colors to white and orange
+      // Changed colors to white,orange and blue. Radius will be selected at random.
       mouse.mousedowners.push(function(x, y, clicked, e) {
-        addEntityWithoutName({ x: x, y: y, colour: "white" });
+        addEntityWithoutName({ x: x, y: y, colour: "Blue", radius: 25 * (2+Math.random()) });
       });
 
       mouse.mouseuppers.push(function(x, y, clicked, e) {
-        addEntityWithoutName({ x: x, y: y, colour: "orange" });
+        addEntityWithoutName({ x: x, y: y, colour: "orange", radius: 50 * (1+Math.random())});
       });
 
       mouse.mousedraggers.push(function(x, y, clicked, e) {
-        addEntityWithoutName({ x: x, y: y, colour: "white", radius: 10 });
+        addEntityWithoutName({ x: x, y: y, colour: "white", radius:10});
       });
 
       function update() {
